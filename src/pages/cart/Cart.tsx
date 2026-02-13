@@ -17,7 +17,6 @@ const Cart = () => {
     0
   );
   const [showCheckout, setShowCheckout] = useState(false);
-  const clearCart = useCartStore((state) => state.clearCart);
   const navigate = useNavigate() ; 
   const [showFailed, setShowFailed] = useState(false);
 
