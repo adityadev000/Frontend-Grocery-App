@@ -5,7 +5,7 @@ const Onboarding = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
+    <div className="h-screen overflow-hidden flex flex-col lg:flex-row">
       
       {/* LEFT SIDE (Desktop Image) */}
       <div className="hidden lg:block lg:w-1/2">

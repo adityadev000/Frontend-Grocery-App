@@ -24,20 +24,18 @@ const ProductDetails = () => {
     (state) => state.addToCart
   );
 
-  const toggleFavorite = useFavoriteStore(
-    (state) => state.toggleFavorite
-  );
+const toggleFavorite = useFavoriteStore(
+  (state) => state.toggleFavorite
+);
 
-  const favorites = useFavoriteStore(
-    (state) => state.favorites
-  );
-
+const isFavorite = useFavoriteStore(
+  (state) => state.isFavorite(product.id)
+);
   const [quantity, setQuantity] = useState(1);
   const [openDetail, setOpenDetail] = useState(true);
 
   if (!product) return <div>Not Found</div>;
 
-  const isFav = favorites.includes(product.id);
 
   return (
     <div className="pb-24 max-w-4xl mx-auto">
@@ -79,14 +77,22 @@ const ProductDetails = () => {
           </div>
 
           <FiHeart
-            size={24}
-            onClick={() =>
-              toggleFavorite(product.id)
-            }
-            className={`cursor-pointer ${
-              isFav ? "text-red-500" : ""
-            }`}
-          />
+          size={24}
+          onClick={() =>
+            toggleFavorite({
+              id: product.id,
+              name: product.name,
+              price: product.price,
+              image: product.image,
+              detail: product.detail,
+            })
+          }
+          className={`cursor-pointer transition ${
+            isFavorite
+              ? "text-primary fill-primary"
+              : "text-gray-400"
+          }`}
+/>
         </div>
 
         {/* Quantity + Price */}

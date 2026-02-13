@@ -1,17 +1,54 @@
 import { create } from "zustand";
 
-interface FavoriteState {
-  favorites: number[];
-  toggleFavorite: (id: number) => void;
+export interface FavoriteItem {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  detail: string;
 }
 
-export const useFavoriteStore = create<FavoriteState>((set) => ({
-  favorites: [],
+interface FavoriteState {
+  favorites: FavoriteItem[];
 
-  toggleFavorite: (id) =>
-    set((state) => ({
-      favorites: state.favorites.includes(id)
-        ? state.favorites.filter((fav) => fav !== id)
-        : [...state.favorites, id],
-    })),
-}));
+  toggleFavorite: (item: FavoriteItem) => void;
+  removeFavorite: (id: number) => void;
+  isFavorite: (id: number) => boolean;
+  clearFavorites: () => void;
+}
+
+export const useFavoriteStore = create<FavoriteState>(
+  (set, get) => ({
+    favorites: [],
+
+    toggleFavorite: (item) => {
+      const exists = get().favorites.find(
+        (p) => p.id === item.id
+      );
+
+      if (exists) {
+        set({
+          favorites: get().favorites.filter(
+            (p) => p.id !== item.id
+          ),
+        });
+      } else {
+        set({
+          favorites: [...get().favorites, item],
+        });
+      }
+    },
+
+    removeFavorite: (id) =>
+      set({
+        favorites: get().favorites.filter(
+          (p) => p.id !== id
+        ),
+      }),
+
+    isFavorite: (id) =>
+      get().favorites.some((p) => p.id === id),
+
+    clearFavorites: () => set({ favorites: [] }),
+  })
+);

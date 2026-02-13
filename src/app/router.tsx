@@ -9,6 +9,11 @@ import Location from "../pages/auth/Location";
 import Login from "../pages/auth/Login";
 import Signup from "../pages/auth/Signup";
 import Explore from "../pages/explore/Explore";
+import Cart from "../pages/cart/Cart";
+import Favorite from "../pages/favorite/Favorite";
+import OrderSuccess from "../pages/order/OrderSuccess";
+import Account from "../pages/account/Account";
+
 
 
 import Home from "../pages/home/Home";
@@ -26,6 +31,7 @@ export const router = createBrowserRouter([
   { path: "/phone", element: <PhoneNumber /> },
   { path: "/signup", element: <Signup /> },
   { path: "/login", element: <Login /> },
+  { path: "/order-success", element: <OrderSuccess /> },
 
   // App routes (with bottom nav)
   {
@@ -35,10 +41,10 @@ export const router = createBrowserRouter([
       { path: "/product/:id", element: <ProductDetails /> },
 
       // You can add these later:
-      // { path: "/cart", element: <Cart /> },
-      // { path: "/favorites", element: <Favorites /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/favorites", element: <Favorite /> },
       { path: "/explore", element: <Explore /> },
-      // { path: "/account", element: <Account /> },
+      { path: "/account", element: <Account /> },
     ],
   },
 ]);

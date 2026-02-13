@@ -39,19 +39,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
           ${product.price}
         </span>
 
-        <button
-          onClick={() =>
-            addToCart({
-              id: product.id,
-              name: product.name,
-              price: product.price,
-              image: product.image,
-            })
-          }
-          className="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center hover:scale-105 transition"
-        >
-          +
-        </button>
+       <button
+        onClick={() =>
+          addToCart({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+          })
+        }
+        className="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center hover:scale-105 transition"
+>
+  +
+</button>
       </div>
     </div>
   );
