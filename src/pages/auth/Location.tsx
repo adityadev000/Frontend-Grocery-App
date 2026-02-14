@@ -17,10 +17,8 @@ const Location = () => {
 
   const handleSubmit = () => {
     if (zone && area) {
-      // ✅ Save to Zustand
       setLocation(zone, area);
 
-      // Navigate to Home
       navigate("/home");
     }
   };
@@ -28,19 +26,15 @@ const Location = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row relative overflow-hidden bg-white">
 
-      {/* Soft Gradient Background */}
       <div className="absolute -top-20 -right-20 w-72 h-72 bg-orange-200 opacity-30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-orange-300 opacity-30 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Desktop Left Illustration */}
       <div className="hidden lg:flex lg:w-1/2 items-center justify-center bg-gray-50">
         <img src={mapImage} alt="Map" className="w-96" />
       </div>
 
-      {/* Right / Mobile Section */}
       <div className="flex-1 px-6 py-10 max-w-md mx-auto w-full relative z-10">
 
-        {/* Back Button */}
         <button
           onClick={() => navigate(-1)}
           className="text-xl mb-6"
@@ -48,7 +42,6 @@ const Location = () => {
           ←
         </button>
 
-        {/* Map Image Mobile */}
         <div className="flex justify-center mb-6 lg:hidden">
           <img src={mapImage} alt="Map" className="w-40" />
         </div>
@@ -62,7 +55,7 @@ const Location = () => {
           what’s happening in your area
         </p>
 
-        {/* Zone */}
+
         <label className="text-gray-500 text-sm">
           Your Zone
         </label>
@@ -79,7 +72,7 @@ const Location = () => {
           ))}
         </select>
 
-        {/* Area */}
+
         <label className="text-gray-500 text-sm">
           Your Area
         </label>
@@ -99,7 +92,7 @@ const Location = () => {
           ))}
         </select>
 
-        {/* Submit */}
+
         <button
           onClick={handleSubmit}
           disabled={!zone || !area}

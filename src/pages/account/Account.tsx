@@ -7,7 +7,7 @@ const Account = () => {
   return (
     <div className="p-4 pb-28 max-w-3xl mx-auto">
 
-      {/* ================= PROFILE HEADER ================= */}
+
       <div className="bg-gradient-to-r from-primary to-green-400 rounded-3xl p-6 text-white shadow-md">
 
         <div className="flex items-center justify-between">
@@ -27,7 +27,7 @@ const Account = () => {
         </button>
       </div>
 
-      {/* ================= ACCOUNT OPTIONS ================= */}
+
       <div className="mt-8 space-y-4">
 
         <AccountItem
@@ -58,7 +58,7 @@ const Account = () => {
 
       </div>
 
-      {/* ================= LOGOUT ================= */}
+
       <div className="mt-10">
         <button
           onClick={() => navigate("/login")}

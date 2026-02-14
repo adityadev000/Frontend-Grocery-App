@@ -19,7 +19,6 @@ export const categories = [
   "Frozen",
 ];
 export const products: Product[] = [
-  // ===== FRUITS =====
   {
     id: 1,
     name: "Grocery Product 1",

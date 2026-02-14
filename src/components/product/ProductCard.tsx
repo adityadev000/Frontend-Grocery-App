@@ -15,7 +15,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="bg-white rounded-3xl p-4 shadow-md hover:shadow-lg transition">
       
-      {/* Product Image */}
       <img
         src={product.image}
         alt={product.name}
@@ -23,17 +22,14 @@ const ProductCard = ({ product }: ProductCardProps) => {
         onClick={() => navigate(`/product/${product.id}`)}
       />
 
-      {/* Product Name */}
       <h3 className="font-semibold text-lg mb-1">
         {product.name}
       </h3>
 
-      {/* Nutrition / Short Detail */}
       <p className="text-gray-500 text-sm mb-4">
         {product.nutrition}
       </p>
 
-      {/* Price + Add */}
       <div className="flex items-center justify-between">
         <span className="text-xl font-bold">
           ${product.price}

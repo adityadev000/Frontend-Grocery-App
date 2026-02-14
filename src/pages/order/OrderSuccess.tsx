@@ -7,25 +7,25 @@ const OrderSuccess = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between items-center px-6 py-10 bg-white">
 
-      {/* Top Space */}
+
       <div />
 
-      {/* Success Content */}
+
       <div className="text-center">
 
-        {/* Animated Circle */}
+
         <div className="relative flex items-center justify-center mb-8">
           
-          {/* Outer Glow */}
+
           <div className="absolute w-40 h-40 bg-primary/20 rounded-full animate-ping" />
 
-          {/* Main Circle */}
+
           <div className="w-36 h-36 bg-primary rounded-full flex items-center justify-center shadow-lg">
             <FiCheck size={60} className="text-white" />
           </div>
         </div>
 
-        {/* Text */}
+
         <h1 className="text-2xl font-bold mb-4">
           Your Order has been accepted
         </h1>
@@ -36,7 +36,7 @@ const OrderSuccess = () => {
         </p>
       </div>
 
-      {/* Buttons */}
+
       <div className="w-full space-y-4">
         <button
           onClick={() => navigate("/track")}

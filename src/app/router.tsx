@@ -22,7 +22,6 @@ import ProductDetails from "../pages/product/ProductDetails";
 import MainLayout from "../components/layout/MainOutlet"
 
 export const router = createBrowserRouter([
-  // Auth routes (no bottom nav)
   { path: "/", element: <Splash /> },
   { path: "/onboarding", element: <Onboarding /> },
   { path: "/signin", element: <Signin /> },
@@ -33,14 +32,12 @@ export const router = createBrowserRouter([
   { path: "/login", element: <Login /> },
   { path: "/order-success", element: <OrderSuccess /> },
 
-  // App routes (with bottom nav)
   {
     element: <MainLayout />,
     children: [
       { path: "/home", element: <Home /> },
       { path: "/product/:id", element: <ProductDetails /> },
 
-      // You can add these later:
       { path: "/cart", element: <Cart /> },
       { path: "/favorites", element: <Favorite /> },
       { path: "/explore", element: <Explore /> },

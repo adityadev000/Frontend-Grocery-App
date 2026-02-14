@@ -17,7 +17,7 @@ const Section = ({
   return (
     <div className="mt-10">
 
-      {/* Header */}
+
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-semibold">
           {title}
@@ -31,7 +31,7 @@ const Section = ({
         </button>
       </div>
 
-      {/* Horizontal Snap Slider */}
+
       <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide pb-2 pr-4">
 
       {products.map((product) => (

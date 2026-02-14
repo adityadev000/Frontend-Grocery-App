@@ -20,11 +20,11 @@ const Signin = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row relative overflow-hidden bg-white">
       
-      {/* Soft Gradient Background */}
+
       <div className="absolute -top-20 -right-20 w-72 h-72 bg-orange-200 opacity-30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-orange-300 opacity-30 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Desktop Left Panel */}
+
       <div className="hidden lg:flex lg:w-1/2 items-center justify-center bg-gray-50">
         <div className="max-w-md text-center">
           <img src={carrotImage} alt="Carrot" className="w-20 mx-auto mb-6" />
@@ -35,10 +35,10 @@ const Signin = () => {
         </div>
       </div>
 
-      {/* Right / Mobile Section */}
+
       <div className="flex-1 px-6 py-10 max-w-md mx-auto w-full relative z-10">
         
-        {/* Logo (Mobile) */}
+
         <div className="flex justify-center mb-[30%] pt-[10%] lg:hidden">
           <img src={carrotImage} alt="Carrot" className="w-14" />
         </div>
@@ -51,7 +51,7 @@ const Signin = () => {
           Enter your emails and password
         </p>
 
-        {/* Email */}
+
         <label className="text-gray-500 text-sm">
           Email
         </label>
@@ -64,7 +64,7 @@ const Signin = () => {
           className="w-full border-b py-3 mb-6 outline-none bg-transparent"
         />
 
-        {/* Password */}
+
         <label className="text-gray-500 text-sm">
           Password
         </label>
@@ -78,7 +78,7 @@ const Signin = () => {
             className="w-full border-b py-3 pr-10 outline-none bg-transparent"
           />
 
-          {/* Eye Button */}
+
             <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
@@ -89,14 +89,14 @@ const Signin = () => {
 
         </div>
 
-        {/* Forgot Password */}
+
         <div className="flex justify-end mb-8">
           <button className="text-sm text-gray-600">
             Forgot Password?
           </button>
         </div>
 
-        {/* Login Button */}
+
         <button
           onClick={handleLogin}
           className="w-full bg-primary text-white py-4 rounded-2xl text-lg font-semibold shadow-lg hover:opacity-90 transition"
@@ -104,7 +104,7 @@ const Signin = () => {
           Log In
         </button>
 
-        {/* Signup */}
+
         <div className="text-center mt-6">
           <span className="text-gray-600">
             Don’t have an account?{" "}

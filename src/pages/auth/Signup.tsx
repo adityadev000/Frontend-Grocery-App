@@ -22,11 +22,11 @@ const Signup = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row relative overflow-hidden bg-white">
       
-      {/* Soft Gradient Background */}
+
       <div className="absolute -top-20 -right-20 w-72 h-72 bg-orange-200 opacity-30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-orange-300 opacity-30 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Desktop Left Panel */}
+
       <div className="hidden lg:flex lg:w-1/2 items-center justify-center bg-gray-50">
         <div className="max-w-md text-center">
           <img src={carrotImage} alt="Carrot" className="w-20 mx-auto mb-6" />
@@ -37,10 +37,10 @@ const Signup = () => {
         </div>
       </div>
 
-      {/* Right / Mobile Section */}
+
       <div className="flex-1 px-6 py-10 max-w-md mx-auto w-full relative z-10">
         
-        {/* Logo (Mobile) */}
+
         <div className="flex justify-center mb-[30%] lg:hidden">
           <img src={carrotImage} alt="Carrot" className="w-14" />
         </div>
@@ -53,7 +53,7 @@ const Signup = () => {
           Enter your credentials to continue
         </p>
 
-        {/* Username */}
+
         <label className="text-gray-500 text-sm">
           Username
         </label>
@@ -66,7 +66,7 @@ const Signup = () => {
           className="w-full border-b py-3 mb-6 outline-none bg-transparent"
         />
 
-        {/* Email */}
+
         <label className="text-gray-500 text-sm">
           Email
         </label>
@@ -88,7 +88,7 @@ const Signup = () => {
           )}
         </div>
 
-        {/* Password */}
+
         <label className="text-gray-500 text-sm">
           Password
         </label>
@@ -111,7 +111,7 @@ const Signup = () => {
           </button>
         </div>
 
-        {/* Terms */}
+
         <p className="text-sm text-gray-500 mb-8">
           By continuing you agree to our{" "}
           <span className="text-primary font-medium">
@@ -123,7 +123,7 @@ const Signup = () => {
           </span>.
         </p>
 
-        {/* Signup Button */}
+
         <button
           onClick={handleSignup}
           className="w-full bg-primary text-white py-4 rounded-2xl text-lg font-semibold shadow-lg hover:opacity-90 transition"
@@ -131,7 +131,7 @@ const Signup = () => {
           Sign Up
         </button>
 
-        {/* Login Link */}
+
         <div className="text-center mt-6">
           <span className="text-gray-600">
             Already have an account?{" "}

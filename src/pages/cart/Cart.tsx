@@ -84,7 +84,7 @@ const Cart = () => {
         </div>
       ))}
 
-      {/* Checkout */}
+
       {cart.length > 0 && (
         <div className="fixed bottom-20 left-0 w-full px-4">
           <button
@@ -98,16 +98,16 @@ const Cart = () => {
 
       {showCheckout && (
   <>
-    {/* Overlay */}
+
     <div
       className="fixed inset-0 bg-black/40 z-[90] "
       onClick={() => setShowCheckout(false)}
     />
 
-    {/* Bottom Sheet */}
+
     <div className="fixed bottom-0 left-0 w-full bg-white rounded-t-3xl p-6 z-[100] animate-slideUp pb-28">
       
-      {/* Header */}
+
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-semibold">
           Checkout
@@ -117,16 +117,16 @@ const Cart = () => {
         </button>
       </div>
 
-      {/* Delivery */}
+
       <Row title="Delivery" value="Select Method" />
 
-      {/* Payment */}
+
       <Row title="Payment" value="Mastercard" />
 
-      {/* Promo */}
+
       <Row title="Promo Code" value="Pick discount" />
 
-      {/* Total */}
+
       <Row
         title="Total Cost"
         value={`$${total.toFixed(2)}`}

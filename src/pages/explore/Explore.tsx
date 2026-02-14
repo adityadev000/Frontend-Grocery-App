@@ -26,7 +26,7 @@ const Explore = () => {
       max: 1000,
     });
 
-  /* ================= FILTER LOGIC ================= */
+
 
   const filteredProducts = products.filter(
     (p) => {
@@ -57,7 +57,7 @@ const Explore = () => {
   return (
     <div className="p-4 pb-28 max-w-7xl mx-auto">
 
-      {/* ================= HEADER ================= */}
+
 
       {!selectedCategory ? (
         <h1 className="text-2xl font-bold text-center mb-6">
@@ -88,7 +88,7 @@ const Explore = () => {
         </div>
       )}
 
-      {/* ================= SEARCH ================= */}
+
 
       <div className="bg-gray-100 flex items-center rounded-xl p-3 mb-6">
         <FiSearch className="text-gray-400" />
@@ -110,7 +110,7 @@ const Explore = () => {
         )}
       </div>
 
-      {/* ================= PRODUCTS GRID ================= */}
+
 
       {(search || selectedCategory) && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -131,7 +131,7 @@ const Explore = () => {
         </div>
       )}
 
-      {/* ================= CATEGORY GRID ================= */}
+
 
       {!search && !selectedCategory && (
         <div className="grid grid-cols-2 gap-4">
@@ -164,7 +164,7 @@ const Explore = () => {
         </div>
       )}
 
-      {/* ================= FILTER MODAL ================= */}
+
 
       <FilterModal
         isOpen={showFilter}
@@ -186,7 +186,7 @@ const Explore = () => {
 
 export default Explore;
 
-/* ================= CATEGORY COLORS ================= */
+
 
 const getCategoryColor = (
   index: number

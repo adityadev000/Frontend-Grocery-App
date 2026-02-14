@@ -39,7 +39,7 @@ const FilterModal = ({
 
       <div className="bg-white w-full max-w-md  rounded-3xl p-6 animate-slideUp ">
 
-        {/* Header */}
+
         <div className="flex justify-between items-center mb-6">
           <FiX
             size={22}
@@ -52,7 +52,7 @@ const FilterModal = ({
           <div />
         </div>
 
-        {/* Categories */}
+
         <h3 className="text-xl font-semibold mb-4">
           Categories
         </h3>
@@ -84,7 +84,7 @@ const FilterModal = ({
           </div>
         ))}
 
-        {/* Price Range */}
+
         <h3 className="text-xl font-semibold mt-6 mb-4">
           Price Range
         </h3>
@@ -110,7 +110,7 @@ const FilterModal = ({
           />
         </div>
 
-        {/* Apply Button */}
+
         <button
           onClick={() => {
             onApply(

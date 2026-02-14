@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <div className="p-4 pb-28 max-w-7xl mx-auto">
 
-      {/* Logo */}
+
       <div className="flex justify-center">
         <img
           src={carrot}
@@ -29,13 +29,13 @@ const Home = () => {
         />
       </div>
 
-      {/* Location */}
+
       <div className="flex items-center justify-center gap-2 mt-2 text-lg font-medium">
         <FiMapPin />
         {zone}, {area}
       </div>
 
-      {/* Search */}
+
       <div className="bg-gray-100 flex items-center gap-2 rounded-xl p-3 mt-4">
         <FiSearch className="text-gray-400" />
         <input
@@ -44,26 +44,26 @@ const Home = () => {
         />
       </div>
 
-      {/* Banner */}
+
       <BannerSlider
         images={[banner, banner, banner]}
       />
 
-      {/* Exclusive Offer */}
+
       <Section
         title="Exclusive Offer"
         products={exclusiveProducts}
         viewAllPath="/section/exclusive"
       />
 
-      {/* Best Selling */}
+
       <Section
         title="Best Selling"
         products={bestSellingProducts}
         viewAllPath="/section/best-selling"
       />
 
-      {/* Groceries */}
+
       <Section
         title="Groceries"
         products={groceryProducts}

@@ -16,7 +16,7 @@ const Splash = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-primary relative overflow-hidden">
       
-      {/* Soft Light Overlay Effect */}
+
       <div className="absolute -top-20 -right-20 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl pointer-events-none" />
 

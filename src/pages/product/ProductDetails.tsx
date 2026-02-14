@@ -16,15 +16,13 @@ const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // ✅ Convert id to number
   const productId = Number(id);
 
-  // ✅ Find product from array
+
   const product = products.find(
     (p) => p.id === productId
   );
 
-  // ✅ If product not found
   if (!product) {
     return (
       <div className="p-10 text-center">
@@ -51,9 +49,9 @@ const ProductDetails = () => {
 
   return (
     <div className="pb-24 max-w-4xl mx-auto">
-      {/* Top Image Section */}
+
       <div className="bg-gray-100 rounded-b-3xl p-6 relative">
-        {/* Top Icons */}
+
         <div className="flex justify-between mb-4">
           <FiArrowLeft
             size={22}
@@ -72,9 +70,9 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Content */}
+
       <div className="p-6">
-        {/* Title + Favorite */}
+
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-2xl font-bold">
@@ -104,7 +102,7 @@ const ProductDetails = () => {
           />
         </div>
 
-        {/* Quantity + Price */}
+
         <div className="flex justify-between items-center mt-6">
           <div className="flex items-center gap-4">
             <button
@@ -139,7 +137,7 @@ const ProductDetails = () => {
 
         <hr className="my-6" />
 
-        {/* Product Detail */}
+
         <div>
           <div
             className="flex justify-between items-center cursor-pointer"
@@ -166,7 +164,7 @@ const ProductDetails = () => {
 
         <hr className="my-6" />
 
-        {/* Nutrition */}
+
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
             <h3 className="font-semibold text-lg">
@@ -181,7 +179,7 @@ const ProductDetails = () => {
 
         <hr className="my-6" />
 
-        {/* Review */}
+
         <div className="flex justify-between items-center">
           <h3 className="font-semibold text-lg">
             Review
@@ -203,7 +201,7 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        {/* Add To Basket */}
+
         <button
           onClick={() =>
             addToCart({
